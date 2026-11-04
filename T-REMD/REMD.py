@@ -171,7 +171,7 @@ def temp_gen():
         p = math.exp(p)
         if p < float(incar['REPTAR']):
             tmp.append([x_fit[i],y_fit[i]])
-    tmp = [[j[0],i] for i,j in enumerate(tmp)]
+    tmp = [[int(j[0]),i] for i,j in enumerate(tmp)]
     log(3,'[temperature generator finished]%s'%tmp)
     return 3
 
